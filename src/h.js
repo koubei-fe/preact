@@ -29,7 +29,7 @@ export function h(nodeName, attributes) {
 			}
 		}
 		else {
-			if (child===true || child===false) child = null;
+			if (typeof child==='boolean') child = null;
 
 			if ((simple = typeof nodeName!=='function')) {
 				if (child==null) child = '';

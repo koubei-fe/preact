@@ -12,7 +12,6 @@ export function enqueueRender(component) {
 	}
 }
 
-
 export function rerender() {
 	let p, list = items;
 	items = [];

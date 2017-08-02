@@ -10,5 +10,4 @@ export function extend(obj, props) {
 /** Call a function asynchronously, as soon as possible.
  *	@param {Function} callback
  */
-let resolved = typeof Promise!=='undefined' && Promise.resolve();
-export const defer = resolved ? (f => { resolved.then(f); }) : setTimeout;
+export const defer = typeof Promise=='function' ? Promise.resolve().then.bind(Promise.resolve()) : setTimeout;
